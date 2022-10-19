@@ -1,0 +1,2 @@
+# 0x03. C - Debugging
+[](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/5/af682f2cbb6d73fd4e42.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221019%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221019T100358Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=4bd607ff0224008355f00c483b086d49ab91146f7c41f2a513c5766d54e2e896)
