@@ -1,1 +1,1 @@
-3-print_numbers.c
+Solutions to tasks on functions and nested loops
