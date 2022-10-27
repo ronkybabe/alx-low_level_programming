@@ -6,26 +6,32 @@
  * Return: char
  */
 
-char *cap_string(char *n)
+char *cap_string(char *str)
 {
-	int i, count = 0;
-	int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	int i = 0;
 
-	if (*(n + count) >= 97 && *(n + count) <= 122)
-		*(n + count) = *(n + count) - 32;
-	count++;
-	while (*(n + count) != '\0')
+	while (str[i])
 	{
-		for (i = 0; i < 13; i++)
-		{
-			if (*(n + count) == sep_words[i])
-			{
-				if ((*(n + (count + 1)) >= 97) && (*(n + (count + 1)) <= 122))
-					*(n + (count + 1)) = *(n + (count + 1)) - 32;
-				break;
-			}
-		}
-		count++;
-	}
-	return (n);
+		while (!(str[i] >= 'a' && str[i] <= 'z'))
+			i++;
+		if (str[i - 1] == '' ||
+		    str[i -1] == '\t'||
+		    str[i - 1] == '\n ||
+		    str[i - 1] == ',' ||
+		    str[i - 1] == ';' ||
+		    str[i - 1] == '.' ||
+		    str[i - 1] == '!' ||
+		    str[i - 1] == '?' ||
+		    str[i - 1] == '"' ||
+		    str[i - 1] == '(' ||
+		    str[i - 1] == ')' ||
+		    str[i - 1] == '{' ||
+		    str[i - 1] == '}' ||
+		    i ==0)
+			str[i] -= 32;
 
+		i++;
+	}
+
+	return (str);
+}
