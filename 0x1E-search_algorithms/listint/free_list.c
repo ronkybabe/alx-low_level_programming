@@ -1,5 +1,5 @@
-#include "../search_algos.h"
 #include <stdlib.h>
+#include "../search_algos.h"
 
 /**
  * free_list - Deallocates a singly linked list
@@ -17,4 +17,3 @@ void free_list(listint_t *list)
 		free_list(node);
 	}
 }
-

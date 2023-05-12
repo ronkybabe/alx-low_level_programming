@@ -13,24 +13,24 @@
   *
   * Description: Prints the [sub]array being searched after each change.
   */
-int binary_search_recursive(int *array, size_t l, size_t r, int v)
+int binary_search_recursive(int *array, size_t left, size_t right, int value)
 {
 	size_t i;
 
-	if (r < l)
+	if (right < left)
 		return (-1);
 
 	printf("Searching in array: ");
-	for (i = l; i < r; i++)
+	for (i = left; i < right; i++)
 		printf("%d, ", array[i]);
 	printf("%d\n", array[i]);
 
-	i = l + (r - l) / 2;
+	i = left + (right - left) / 2;
 	if (array[i] == value)
 		return (i);
 	if (array[i] > value)
-		return (binary_search_recursive(array, l, i - 1, value));
-	return (binary_search_recursive(array, i + 1, r, value));
+		return (binary_search_recursive(array, left, i - 1, value));
+	return (binary_search_recursive(array, i + 1, right, value));
 }
 
 /**

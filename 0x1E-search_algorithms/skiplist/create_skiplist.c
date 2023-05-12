@@ -1,10 +1,11 @@
 #include <stdlib.h>
+#include <math.h>
 #include "../search_algos.h"
 
 void free_skiplist(skiplist_t *list);
 
 /**
- * init_express - Initializes the express lane of the list
+ * init_express - Initializes the express lane of the linked list
  *
  * @list: Pointer to the head node of the list
  * @size: Number of nodes in the list
@@ -26,7 +27,7 @@ void init_express(skiplist_t *list, size_t size)
 }
 
 /**
- * create_skiplist - Create a single list
+ * create_skiplist - Create a single linked list
  *
  * @array: Pointer to the array used to fill the list
  * @size: Size of the array
@@ -58,4 +59,3 @@ skiplist_t *create_skiplist(int *array, size_t size)
 	init_express(list, save_size);
 	return (list);
 }
-
